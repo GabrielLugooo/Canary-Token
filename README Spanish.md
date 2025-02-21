@@ -1,9 +1,9 @@
 <img align="center" src="https://media.licdn.com/dms/image/v2/D4D16AQGUNxQ7NSC05A/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1738695150340?e=1744243200&v=beta&t=oXX-ixT9bR3dJcYCLv4KBs5wjKFoeP0524kFGHQMYmQ" alt="gabriellugo" />
 
-# TOKEN CANARY
+# TÓKEN CANARY
 
-<a href="" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Tóken%20Canary%20Español-000000" alt="Canary Español" /></a>
-<a href="" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Tóken%20Canary%20Inglés-green" alt="Canary Inglés" /></a>
+<a href="https://github.com/GabrielLugooo/Canary-Token/blob/main/README%20Spanish.md" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Tóken%20Canary%20Español-000000" alt="Canary Español" /></a>
+<a href="https://github.com/GabrielLugooo/Canary-Token" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Tóken%20Canary%20Inglés-green" alt="Canary Inglés" /></a>
 
 ### Objetivos
 

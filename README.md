@@ -2,8 +2,8 @@
 
 # CANARY TOKEN
 
-<a href="" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/English%20Canary%20Token-000000" alt="English Canary" /></a>
-<a href="" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Spanish%20Canary%20Token-green" alt="Spanish Canary" /></a>
+<a href="https://github.com/GabrielLugooo/Canary-Token" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/English%20Canary%20Token-000000" alt="English Canary" /></a>
+<a href="https://github.com/GabrielLugooo/Canary-Token/blob/main/README%20Spanish.md" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Spanish%20Canary%20Token-green" alt="Spanish Canary" /></a>
 
 ### Objective
 
