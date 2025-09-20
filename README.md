@@ -1,4 +1,4 @@
-<img align="center" src="https://media.licdn.com/dms/image/v2/D4D16AQGUNxQ7NSC05A/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1738695150340?e=1744243200&v=beta&t=oXX-ixT9bR3dJcYCLv4KBs5wjKFoeP0524kFGHQMYmQ" alt="gabriellugo" />
+<img align="center" src="https://i.imgur.com/ZgHWFhw.png" alt="gabriellugo" />
 
 # CANARY TOKEN
 
