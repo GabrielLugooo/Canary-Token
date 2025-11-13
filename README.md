@@ -7,8 +7,6 @@
 
 ### Objective
 
-Text Here
-
 ### Skills Learned
 
 - Advanced understanding of Canary Token concepts and practical application.
