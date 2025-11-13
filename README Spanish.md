@@ -40,43 +40,43 @@ Un Website Copier (como HTTrack) es una utilidad que descarga páginas, imágene
 
 ### Layout del Ataque
 
-- Layout General del Ataque
+#### Layout General del Ataque
 
 <img align="center" src="assets/HttrackLayout.jpg" alt="Httrack Layout" />
 
-- Web de HTTrack
+#### Web de HTTrack
 
 <img align="center" src="assets/HttrackWeb1.jpg" alt="Httrack Web" />
 
-- Download de HTTrack
+#### Download de HTTrack
 
 <img align="center" src="assets/HttrackWeb2.jpg" alt="Httrack Download" />
 
-- Setup inicial
+#### Setup inicial
 
 <img align="center" src="assets/HttrackSetup1.jpg" alt="Httrack Setup" />
 
-- Nombrar el proyecto
+#### Nombrar el proyecto
 
 <img align="center" src="assets/HttrackSetup2.jpg" alt="Httrack Project Name" />
 
-- Copiar direccion de la web _REAL_
+#### Copiar direccion de la web _REAL_
 
 <img align="center" src="assets/WellsFargoReal.jpg" alt="Httrack Copy Dir" />
 
-- Pegar la direccion de la web a copiar
+#### Pegar la direccion de la web a copiar
 
 <img align="center" src="assets/HttrackSetup3.jpg" alt="Httrack Paste Dir" />
 
-- Operacion de _Mirroring_ o clonado
+#### Operacion de _Mirroring_ o clonado
 
 <img align="center" src="assets/HttrackSetup4.jpg" alt="Httrack Mirroring init" />
 
-- Operacion de mirroring finalizada
+#### Operacion de mirroring finalizada
 
 <img align="center" src="assets/HttrackSetup5.jpg" alt="Httrack Mirroring Finish" />
 
-- Resultado de la web _FAKE_ (ver HHTTP en Local)
+#### Resultado de la web _FAKE_ (ver HHTTP en Local)
 
 <img align="center" src="assets/WellsFargoFake.jpg" alt="Httrack Results" />
 
@@ -88,73 +88,74 @@ Servidor propio: Thinkst publica herramientas y imágenes Docker para correr tu 
 
 ### Layout de Defensa
 
-- Objetivo de la amenaza
+#### Objetivo de la amenaza
 
 <img align="center" src="assets/HttrackLayout2.jpg" alt="Httrack Objetive" />
 
-- Seleccionar el token cloned website en la web de Canary
+#### Seleccionar el token cloned website en la web de Canary
 
 <img align="center" src="assets/CanaryWeb1.jpg" alt="Canary Web Select Token" />
 
-- En el token cloned website ingresar datos solicitados:
+#### En el token cloned website ingresar datos solicitados:
 
-* mail para alertas
-* nombre del token
-* web a proteger del clonado
+- mail para alertas
+- nombre del token
+- web a proteger del clonado
 
 <img align="center" src="assets/CanaryWeb2.jpg" alt="Canary Token Info " />
 
-- Copiar el Javascript del token
+#### Copiar el Javascript del token
 
 <img align="center" src="assets/CanaryWeb3.jpg" alt="Canary Token Javascript" />
 
-- Abrir el index.html de la web _REAL_
+#### Abrir el index.html de la web _REAL_
 
 <img align="center" src="assets/CanaryTokenJS1.jpg" alt="Canary Token Javascript" />
 
-- Pegar el Javascript del token (no olvidar los <script></script>)
+#### Pegar el Javascript del token (no olvidar los <script></script>)
 
 <img align="center" src="assets/CanaryTokenJS2.jpg" alt="Canary Token Javascript" />
 
-- Triggering del token
+#### Triggering del token
 
-* Si alguien clona la web se dispara el token y nos llegara la alerta por mail con los detalles basicos:
+- Si alguien clona la web se dispara el token y nos llegara la alerta por mail con los detalles basicos:
 
 <img align="center" src="assets/CanaryTokenJS4.jpg" alt="Canary Token Mail" />
 
-- Tambien podemos ver el trigger de la alerta en la web de CanaryToken y mas detalles como la ubicacion
-  de la amenaza:
+#### Tambien podemos ver el trigger de la alerta en la web de CanaryToken y mas detalles como la ubicacion
+
+de la amenaza:
 
 <img align="center" src="assets/CanaryTokenJS5.jpg" alt="Canary Token Map" />
 
-- Obfuscacion del Javascript del token
+#### Obfuscacion del Javascript del token
 
-* Si la amenaza inspecciona el index.html de la web antes del clonado puede determinar que la web contiene
+- Si la amenaza inspecciona el index.html de la web antes del clonado puede determinar que la web contiene
   un Token Canary, para reforzar la seguridad y invisibilizar el Token procedemos con la ofuscacion del .JS
   mediante la web obfuscator.io:
 
 <img align="center" src="assets/CanaryTokenJS6.jpg" alt="Token Javascript obf 1" />
 
-- Una vez ejecutado (click en boton obfuscate), copiar el token Javascript obfuscado, seria algo similar a:
+#### Una vez ejecutado (click en boton obfuscate), copiar el token Javascript obfuscado, seria algo similar a:
 
 <img align="center" src="assets/CanaryTokenJS7.jpg" alt="Token Javascript obf 2" />
 
-- Pegar el el token Javascript obfuscado en el index.html de la web:
+#### Pegar el el token Javascript obfuscado en el index.html de la web:
 
 <img align="center" src="assets/CanaryTokenJS8.jpg" alt="Token Javascript obf 3" />
 
-- Pinging la web canarytokens.com
+#### Pinging la web canarytokens.com
 
-* En CMD procedemos a hacer un Ping sobre la web canarytokens.com, eso nos dara la IP del servidor por lo que permite enmascarar el dominio canarytokens.com:
+- En CMD procedemos a hacer un Ping sobre la web canarytokens.com, eso nos dara la IP del servidor por lo que permite enmascarar el dominio canarytokens.com:
 
-* Copiamos la IP y la pegamos como indica la imagen ('HTTP://52.18.63.80/') en el token obfuscado, en el
+- Copiamos la IP y la pegamos como indica la imagen ('HTTP://52.18.63.80/') en el token obfuscado, en el
   index.html donde antes estaba el dominio canarytokens.com.
 
 <img align="center" src="assets/CanaryTokenJS9.jpg" alt="Canary Token Javascript" />
 
-- Ocultacion del token final
+#### Ocultacion del token final
 
-* finalmente nos deberia quedar algo asi si una amenaza inspecciona el codigo del index.html
+- finalmente nos deberia quedar algo asi si una amenaza inspecciona el codigo del index.html
   de la web real:
 
 <img align="center" src="assets/CanaryTokenJS10.jpg" alt="Canary Token Javascript" />
