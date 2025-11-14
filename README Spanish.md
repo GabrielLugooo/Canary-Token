@@ -86,7 +86,7 @@ Canarytokens son “tripwires” sencillos (links, documentos, DNS names, API ke
 
 Servidor propio: Thinkst publica herramientas y imágenes Docker para correr tu propio servidor de Canarytokens — útil para evitar depender de servicios públicos y para escalabilidad/privacidad.
 
-### Layout de Defensa
+### Layout inicial de Defensa
 
 #### Objetivo de la amenaza
 
@@ -162,51 +162,92 @@ de la amenaza:
 
 ## Servidor Privado de CanaryToken para mas seguridad
 
-### Canary Token Dockerizado
+### Dockerizado
 
 - Se puede seguir las instrucciones en el repositorio en GitHub Canarytokens / Thinkst.
 
-  https://github.com/thinkst/canarytokens?utm_source=chatgpt.com
+  https://github.com/thinkst/canarytokens
 
 #### Instalar docker para Linux
 
-- Instalar docker para Linux y abrir una maquina virtual en Ubuntu:
+- seguir las instrucciones para instalar Docker para Linux desde el repositorio,
+  abrir una maquina virtual en tu servidor Linux, en este ejemplo _Ubuntu_.
+
+- Actualizar el paquete de Docker:
 
 <img align="center" src="assets/DockerLinux2.jpg" alt="Docker Linux 2" />
 
+- Instalar el paquete de Docker:
+
 <img align="center" src="assets/DockerLinux3.jpg" alt="Docker Linux 3" />
+
+- Añadir la Key GPG oficial de Docker:
 
 <img align="center" src="assets/DockerLinux4.jpg" alt="Docker Linux 4" />
 
+- Configurar el repositorio estable de Docker:
+
 <img align="center" src="assets/DockerLinux5.jpg" alt="Docker Linux 5" />
+
+- Actualizar Docker Engine:
 
 <img align="center" src="assets/DockerLinux6.jpg" alt="Docker Linux 6" />
 
+- Instalar Docker Engine:
+
 <img align="center" src="assets/DockerLinux7.jpg" alt="Docker Linux 7" />
+
+- Verificar que Docker Engine se instalo correctamente corriendo la imagen Hello-World:
 
 <img align="center" src="assets/DockerLinux8.jpg" alt="Docker Linux 8" />
 
-- Clonar GitHub de Canary:
+#### Clonar GitHub de Canary
+
+- Git clone:
 
 <img align="center" src="assets/CanaryGithubClone1.jpg" alt="Canary Clone 1" />
 
+- Posicionarse dentro de cd canarytokens-docker:
+
 <img align="center" src="assets/CanaryGithubClone2.jpg" alt="Canary Clone 2" />
+
+- Instalar Python (en este caso la version python3 con pip)
+  darle a [Y]:
 
 <img align="center" src="assets/CanaryGithubClone3.jpg" alt="Canary Clone 3" />
 
-- Instalar Docker Compose:
+#### Instalar Docker Compose:
+
+- Instalar Python-dev (en este caso python3-dev):
 
 <img align="center" src="assets/DockerCompose1.jpg" alt="Docker Compose 1" />
 
+- Instalar librerias -dev:
+
 <img align="center" src="assets/DockerCompose2.jpg" alt="Docker Compose 2" />
+
+- Instalar Docker Compose:
 
 <img align="center" src="assets/DockerCompose3.jpg" alt="Docker Compose 3" />
 
-- Rename Files:
+#### Rename Files:
+
+- Listar archivos en /canarytokens-docker con _ls_ y renombrar archivos:
+- switchboard.env.dist a switchboard.env
+- frontend.env.dist a frontend.env
 
 <img align="center" src="assets/DockerRename1.jpg" alt="Docker Rename 1" />
 
+- Abrir frontend.env:
+
 <img align="center" src="assets/DockerRename2.jpg" alt="Docker Rename 2" />
+
+- Configura tus dominios para que sus NAMESERVERS apunten a la IP pública del host de Docker. Esto requiere un cambio en tu registro. Modificar simplemente los registros DNS en la zona de archivos no es suficiente. Necesitarás un registro A de tu dominio que apunte a tu IP pública.
+
+- Ingresar el valor CANARY_DOMAINS= la IP/Dominio a proteger
+- Ingresar el valor CANARY_NXDOMAINS= solo PDF Tokens
+- Si tienes una GOOGLE_API_KEY= ingresar tambien
+- Guardar
 
 <img align="center" src="assets/DockerRename3.jpg" alt="Docker Rename 3" />
 
@@ -214,25 +255,59 @@ de la amenaza:
 
 <img align="center" src="assets/DockerRename5.jpg" alt="Docker Rename 5" />
 
+- Abrir switchboard.env
+- Descomentar CANARY_PUBLIC_IP= o CANARY_PUBLIC_DOMAIN y setear con la IP/DOMINIO
+- CANARY_ALERT_EMAIL= Email para recibir las alertas
+- CANARY_ALERT_FROM_DISPLAY= Mensaje a recibir en las alertas
+- CANARY_ALERT_EMAIL_SUBJECT= Asunto de los Emails de las alertas
+
 <img align="center" src="assets/DockerRename6.jpg" alt="Docker Rename 6" />
+
+- Descargar e iniciar las imagenes Docker Compose:
 
 <img align="center" src="assets/DockerRename7.jpg" alt="Docker Rename 7" />
 
-- Ports:
+#### Puertos
+
+- Revisamos los puertos activos (servidores docker)
 
 <img align="center" src="assets/DockerPorts1.jpg" alt="Docker Ports 1" />
 
+#### Frontend de Canarytoken
+
+- Hacemos ifconfig y nos muestra la IP en la que esta corriendo el frontend de Canary:
+
+<img align="center" src="assets/DockerPorts2a.jpg" alt="Docker Ports 2a" />
+
 <img align="center" src="assets/DockerPorts2.jpg" alt="Docker Ports 2" />
+
+#### Proceso de tokenizado (repetir IDEM segun Layout Inicial de Defensa)
+
+- Generar el .JS del token para cloned website:
+- Copiar .JS del token
 
 <img align="center" src="assets/DockerPorts3.jpg" alt="Docker Ports 3" />
 
+- Abrir el index.html de la web a proteger y pegar el .JS del token
+- Guardar
+
 <img align="center" src="assets/DockerPorts4.jpg" alt="Docker Ports 4" />
+
+- Probamos el trigger de la alerta en nuestro Canarytokens en Docker
 
 <img align="center" src="assets/DockerPorts5.jpg" alt="Docker Ports 5" />
 
+- Obfuscamos el .JS con obfuscator.io
+- Copiamos el token .JS obfuscado
+
 <img align="center" src="assets/DockerPorts6.jpg" alt="Docker Ports 6" />
 
+- Abrir el index.html de la web a proteger y reemplazar el .JS anterior por el .JS del token obfuscado
+- Guardar
+
 <img align="center" src="assets/DockerPorts7.jpg" alt="Docker Ports 7" />
+
+- eso es todo !
 
 ## Estrategia de Defensa Recomendada (resumen práctico, sin comandos):
 
