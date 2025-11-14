@@ -361,13 +361,13 @@ _(mi favorito: token tipo AWS API key fake en GitHub para detectar leaks)_
   https://www.httrack.com/
 
 - Canarytokens / Thinkst (repositorio y docs).
-  https://github.com/thinkst/canarytokens?utm_source=chatgpt.com
+  https://github.com/thinkst/canarytokens
 
 - Canarytokens.org — página pública y generador.
   https://canarytokens.org/nest/
 
 - Artículo resumen sobre descargadores de sitios y riesgos generales.
-  https://www.lifewire.com/how-to-download-a-website-for-offline-reading-4769529?utm_source=chatgpt.com
+  https://www.lifewire.com/how-to-download-a-website-for-offline-reading-4769529
 
 ### Limitaciones
 
