@@ -160,8 +160,6 @@ de la amenaza:
 
 <img align="center" src="assets/CanaryTokenJS10.jpg" alt="Canary Token Final" />
 
-- en la siguiente seccion (Servidor Privado) se puede seguir ampliando la seguridad con Dockerizado.
-
 ## Servidor Privado de CanaryToken para mas seguridad
 
 ### Canary Token Dockerizado
