@@ -122,7 +122,7 @@ Servidor propio: Thinkst publica herramientas y imágenes Docker para correr tu 
 
 <img align="center" src="assets/CanaryTokenJS4.jpg" alt="Canary Token Mail" />
 
-#### Tambien podemos ver el trigger de la alerta en la web de CanaryToken y mas detalles como la ubicacion
+- Tambien podemos ver el trigger de la alerta en la web de CanaryToken y mas detalles como la ubicacion
 
 de la amenaza:
 
@@ -136,11 +136,11 @@ de la amenaza:
 
 <img align="center" src="assets/CanaryTokenJS6.jpg" alt="Token Javascript obf 1" />
 
-#### Una vez ejecutado (click en boton obfuscate), copiar el token Javascript obfuscado, seria algo similar a:
+- Una vez ejecutado (click en boton obfuscate), copiar el token Javascript obfuscado, seria algo similar a:
 
 <img align="center" src="assets/CanaryTokenJS7.jpg" alt="Token Javascript obf 2" />
 
-#### Pegar el el token Javascript obfuscado en el index.html de la web:
+- Pegar el el token Javascript obfuscado en el index.html de la web:
 
 <img align="center" src="assets/CanaryTokenJS8.jpg" alt="Token Javascript obf 3" />
 
@@ -151,21 +151,90 @@ de la amenaza:
 - Copiamos la IP y la pegamos como indica la imagen ('HTTP://52.18.63.80/') en el token obfuscado, en el
   index.html donde antes estaba el dominio canarytokens.com.
 
-<img align="center" src="assets/CanaryTokenJS9.jpg" alt="Canary Token Javascript" />
+<img align="center" src="assets/CanaryTokenJS9.jpg" alt="Canary Ping" />
 
 #### Ocultacion del token final
 
 - finalmente nos deberia quedar algo asi si una amenaza inspecciona el codigo del index.html
   de la web real:
 
-<img align="center" src="assets/CanaryTokenJS10.jpg" alt="Canary Token Javascript" />
+<img align="center" src="assets/CanaryTokenJS10.jpg" alt="Canary Token Final" />
 
-- de manera publica es la mayor invisibilidad que se puede lograr para ocultar el Canary Token,
-  en la siguiente seccion (Servidor Privado) se puede seguir ampliando la seguridad.
+- en la siguiente seccion (Servidor Privado) se puede seguir ampliando la seguridad con Dockerizado.
 
 ## Servidor Privado de CanaryToken para mas seguridad
 
-### AQUI !!!
+### Canary Token Dockerizado
+
+- Se puede seguir las instrucciones en el repositorio en GitHub Canarytokens / Thinkst.
+
+  https://github.com/thinkst/canarytokens?utm_source=chatgpt.com
+
+#### Instalar docker para Linux
+
+- Instalar docker para Linux y abrir una maquina virtual en Ubuntu:
+
+<img align="center" src="assets/DockerLinux2.jpg" alt="Docker Linux 2" />
+
+<img align="center" src="assets/DockerLinux3.jpg" alt="Docker Linux 3" />
+
+<img align="center" src="assets/DockerLinux4.jpg" alt="Docker Linux 4" />
+
+<img align="center" src="assets/DockerLinux5.jpg" alt="Docker Linux 5" />
+
+<img align="center" src="assets/DockerLinux6.jpg" alt="Docker Linux 6" />
+
+<img align="center" src="assets/DockerLinux7.jpg" alt="Docker Linux 7" />
+
+<img align="center" src="assets/DockerLinux8.jpg" alt="Docker Linux 8" />
+
+- Clonar GitHub de Canary:
+
+<img align="center" src="assets/CanaryGithubClone1.jpg" alt="Canary Clone 1" />
+
+<img align="center" src="assets/CanaryGithubClone2.jpg" alt="Canary Clone 2" />
+
+<img align="center" src="assets/CanaryGithubClone3.jpg" alt="Canary Clone 3" />
+
+- Instalar Docker Compose:
+
+<img align="center" src="assets/DockerCompose1.jpg" alt="Docker Compose 1" />
+
+<img align="center" src="assets/DockerCompose2.jpg" alt="Docker Compose 2" />
+
+<img align="center" src="assets/DockerCompose3.jpg" alt="Docker Compose 3" />
+
+- Rename Files:
+
+<img align="center" src="assets/DockerRename1.jpg" alt="Docker Rename 1" />
+
+<img align="center" src="assets/DockerRename2.jpg" alt="Docker Rename 2" />
+
+<img align="center" src="assets/DockerRename3.jpg" alt="Docker Rename 3" />
+
+<img align="center" src="assets/DockerRename4.jpg" alt="Docker Rename 4" />
+
+<img align="center" src="assets/DockerRename5.jpg" alt="Docker Rename 5" />
+
+<img align="center" src="assets/DockerRename6.jpg" alt="Docker Rename 6" />
+
+<img align="center" src="assets/DockerRename7.jpg" alt="Docker Rename 7" />
+
+- Ports:
+
+<img align="center" src="assets/DockerPorts1.jpg" alt="Docker Ports 1" />
+
+<img align="center" src="assets/DockerPorts2.jpg" alt="Docker Ports 2" />
+
+<img align="center" src="assets/DockerPorts3.jpg" alt="Docker Ports 3" />
+
+<img align="center" src="assets/DockerPorts4.jpg" alt="Docker Ports 4" />
+
+<img align="center" src="assets/DockerPorts5.jpg" alt="Docker Ports 5" />
+
+<img align="center" src="assets/DockerPorts6.jpg" alt="Docker Ports 6" />
+
+<img align="center" src="assets/DockerPorts7.jpg" alt="Docker Ports 7" />
 
 ## Estrategia de Defensa Recomendada (resumen práctico, sin comandos):
 
